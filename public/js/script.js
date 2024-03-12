@@ -7,19 +7,37 @@ function confirmDelete(url) {
 
 function validateForm(event) {
   const errMsg = document.getElementById("err");
-  const fields = ["name", "tel", "bank_name", "passport", "postcode", "address"];
+  const fields = [
+    "name",
+    "tel",
+    "bank_name",
+    "passport",
+    "postcode",
+    "address",
+  ];
 
-  // TODO: Not checking for numbers
-  fields.forEach(function(field) {
+  fields.forEach(function (field) {
     var value = document.getElementById(field).value;
-    if (value == "" || value.length > 100 || (field == "tel" && !(/^d{10}$/.test(userPhone)))) {
+    if (
+      value == "" ||
+      value.length > 100 ||
+      (field === "tel" && !validPhone(value))
+    ) {
       event.preventDefault();
-      var errOrigin = field.charAt(0).toUpperCase + field.slice(1);
+      var errOrigin = field.charAt(0).toUpperCase() + field.slice(1);
       errMsg.innerHTML = `${errOrigin} cannot be validated!`;
       return false;
     } else {
       return true;
     }
-  })
+  });
 }
 
+function validPhone(phoneNumber) {
+  for (let i = 0; i < phoneNumber.length; i++) {
+    if (!/\d/.test(phoneNumber[i])) {
+      return false; 
+    }
+  }
+  return true;
+}

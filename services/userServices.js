@@ -37,7 +37,12 @@ const getUser = (id) => {
 
 const addUser = (user, callback) => {
   const db = getDb();
-  const id = Math.max(...Object.keys(db.items));
+  let id;
+  if (Object.keys(db.items).length === 0) {
+    id = 0;
+  } else {
+    id = Math.max(...Object.keys(db.items));
+  }
   db.items[id + 1] = user;
   saveDb(db, callback);
 };
@@ -62,4 +67,4 @@ const deleteUser = (id, callback) => {
   saveDb(db, callback);
 };
 
-module.exports = { getUser, getAllUsers, addUser, updateUser, deleteUser }
+module.exports = { getUser, getAllUsers, addUser, updateUser, deleteUser };

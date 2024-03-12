@@ -2,7 +2,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .container {
-  max-width: 900px;
+  max-width: 850px;
   margin: 0 auto;
 }
 .header {
@@ -172,7 +172,7 @@ textarea {
 .table th,
 .table td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 5px;
   text-align: left;
 }
 .table th {

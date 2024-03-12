@@ -1,4 +1,13 @@
 {
     "_default": {},
-    "items": {}
+    "items": {
+        "1": {
+            "name": "John Doe",
+            "tel": "1234567",
+            "passport": "AB123456",
+            "bank_name": "Citibank",
+            "postcode": "1000021",
+            "address": "Chaqar, Shaykhontohur, Tashkent"
+        }
+    }
 }
