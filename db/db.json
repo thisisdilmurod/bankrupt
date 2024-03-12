@@ -1,13 +1,4 @@
 {
     "_default": {},
-    "items": {
-        "1": {
-            "name": "Sung Ji Woo",
-            "tel": "+998977519",
-            "passport": "AD000085",
-            "bank_name": "KDB",
-            "postcode": "100024",
-            "address": "Seul Street, Mumbai"
-        }
-    }
+    "items": {}
 }
