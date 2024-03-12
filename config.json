@@ -1,0 +1,4 @@
+{
+    "db": "./db/db.json",
+    "admins": "./db/admins.json"
+}

@@ -1,0 +1,41 @@
+<% var title='Edit user' %>
+    <% include partials/_header.ejs %>
+
+        <div class="container">
+            <div class="card__form">
+                <h3 class="form__title">Add User</h3>
+                <form method="post" action="/users/add">
+                    <div class="form__field">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp" />
+                    </div>
+                    <div class="form__field">
+                        <label for="tel" class="form-label">Phone:</label>
+                        <input type="text" class="form-control" id="tel" name="tel" />
+                    </div>
+                    <div class="form__field">
+                        <label for="bank_name" class="form-label">Bank:</label>
+                        <input type="text" class="form-control" id="bank_name" name="bank_name" />
+                    </div>
+
+                    <div class="form__field">
+                        <label for="passport" class="form-label">Passport:</label>
+                        <input type="text" class="form-control" id="passport" name="passport" />
+                    </div>
+                    <div class="form__field">
+                        <label for="postcode" class="form-label">Postcode:</label>
+                        <input type="text" class="form-control" id="postcode" name="postcode" />
+                    </div>
+                    <div class="form__field">
+                        <label for="address" class="form-label">Address:</label>
+                        <textarea class="form-control" id="address" name="address" rows="3"></textarea>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="submit-btn">Save User</button>
+                        <a href="/users" class="cancel-btn">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <% include partials/_footer.ejs %>

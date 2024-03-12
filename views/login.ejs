@@ -1,0 +1,28 @@
+<% var title='Login' %>
+    <% include partials/_header.ejs %>
+
+        <div class="container">
+            <div class="card__login">
+                <h3 class="login">Log In</h3>
+                <span class="text-danger"><%- errMsg %></span>
+                <span class="text-success"><%- message %></span>
+                <form method="post" action="/auth/login">
+                    <div class="login__field">
+                        <label for="username" class="form-label">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username"
+                            aria-describedby="usernameHelp" />
+                    </div>
+                    <div class="login__field">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" />
+                    </div>
+                    <div class="login__field form-check">
+                        <input type="checkbox" class="form-check-input" id="create" name="create" />
+                        <label class="form-check-label" for="create">Create a new account</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <% include partials/_footer.ejs %>

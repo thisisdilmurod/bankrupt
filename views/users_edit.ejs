@@ -1,0 +1,46 @@
+<% var title='Edit user' %>
+    <% include partials/_header.ejs %>
+
+        <div class="container">
+            <div class="card__form">
+                <h3 class="form__title">Edit User</h3>
+                <form method="post" action="/users/update/<%= data.id %>">
+                    <div class="form__field">
+                        <label for="name" class="form-label">Fullname:</label>
+                        <input type="text" class="form-control" id="name" name="name" value="<%= data.name %>"
+                            autofocus />
+                    </div>
+                    <div class="form__field">
+                        <label for="tel" class="form-label">Phone:</label>
+                        <input type="text" class="form-control" id="tel" name="tel" value="<%= data.tel %>" />
+                    </div>
+                    <div class="form__field">
+                        <label for="passport" class="form-label">Passport:</label>
+                        <input type="text" class="form-control" id="passport" name="passport"
+                            value="<%= data.passport %>" />
+                    </div>
+                    <div class="form__field">
+                        <label for="bank_name" class="form-label">Bank:</label>
+                        <input type="text" class="form-control" id="bank_name" name="bank_name"
+                            value="<%= data.bank_name %>" />
+                    </div>
+                    <div class="form__field">
+                        <label for="postcode" class="form-label">Postcode:</label>
+                        <input type="text" class="form-control" id="postcode" name="postcode"
+                            value="<%= data.postcode %>" />
+                    </div>
+                    <div class="form__field">
+                        <label for="address" class="form-label">Address:</label>
+                        <textarea class="form-control" id="address" name="address"
+                            rows="3"><%= data.address %></textarea>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="submit-btn">Save User</button>
+                        <a href="/users" class="cancel-btn">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <% include partials/_footer.ejs %>
