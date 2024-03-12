@@ -1,11 +1,10 @@
 <% var title='Login' %>
-    <% include partials/_header.ejs %>
+    <% include partials/header.ejs %>
 
         <div class="container">
             <div class="card__login">
                 <h3 class="login">Log In</h3>
                 <span class="text-danger"><%- errMsg %></span>
-                <span class="text-success"><%- message %></span>
                 <form method="post" action="/auth/login">
                     <div class="login__field">
                         <label for="username" class="form-label">Username:</label>
@@ -25,4 +24,4 @@
             </div>
         </div>
 
-        <% include partials/_footer.ejs %>
+        <% include partials/footer.ejs %>

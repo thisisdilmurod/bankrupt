@@ -2,6 +2,8 @@ const hash = require('pbkdf2-password')();
 const session = require('express-session');
 const { getAdmins } = require('../utils');
 
+// Divide to controllers and services
+
 const controller = {};
 
 controller.session = session({
@@ -42,14 +44,14 @@ const saveDb = (data, callback) => {
 
 
 function authenticate(name, pass, fn) {
-    if (!module.parent) console.log('authenticating %s:%s', name, pass);
+    if (!module.parent) console.log('Authenticating %s:%s', name, pass);
     var admins = getAdmins();
     var user = admins[name];
-    if (!user) return fn(new Error('cannot find user'));
+    if (!user) return fn(new Error('Cannot find user'));
     hash({ password: pass, salt: user.salt }, function (err, pass, salt, hash) {
         if (err) return fn(err);
         if (hash === user.hash) return fn(null, user);
-        fn(new Error('invalid password'));
+        fn(new Error('Invalid password'));
     });
 }
 

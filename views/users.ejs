@@ -1,4 +1,4 @@
-<% var title = 'Users' %> <% include partials/_header.ejs %>
+<% var title = "Users" %> <% include partials/header.ejs %>
 
 <div class="container">
     <table class="table" style="width: 100%">
@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <% if (data) { %> <% for(var i = 0; i < data.length; i++) { %>
+            <% if (data) { %> <% for(let i = 0; i < data.length; i++) { %>
             <tr>
                 <td scope="row"><%= data[i].id %></td>
                 <td><%= data[i].name %></td>
@@ -37,4 +37,4 @@
 
 
 
-<% include partials/_footer.ejs %>
+<% include partials/footer.ejs %>

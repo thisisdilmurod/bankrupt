@@ -1,6 +1,8 @@
 const controller = {};
 const { getDb } = require('../utils');
 
+// Divide to controllers and services
+
 const saveDb = (data, callback) => {
     var fs = require('fs');
     const config = require('../config.json');

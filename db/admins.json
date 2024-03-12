@@ -3,5 +3,10 @@
         "name": "thisisdilmurod",
         "salt": "yDbDzs7bZ5nuxPMMgoSnkAu3LvouKhtHxMQQXBycO5GQVIZXRbZppjiiDXYer4hIXc0BvTSS+5C0WVgXNwmIbg==",
         "hash": "enmSTk2XQdZaTapqOd/5ceYFZ5I08QXpascI8GoSY+mAhXXOeWvlP0OFzSDYCUB9S2tbsvGeiWS3D6n+mqykXFB4ob2DZdr/uSODlAdgmjXpm7KZJF+knPp5YKwQ1KcCQIxPfgNotlsVuE2Qi+Xjzw48hHt5vBiFSDvE5oE5/Qo="
+    },
+    "admin": {
+        "name": "admin",
+        "salt": "V1DTvfjpqmz8Rs6EoCQoIrTSS502PqNzS1K7reTM95mS5lzXDmAc3LFDzzVgw6F740XV9QoOYbt24DreDZOIDA==",
+        "hash": "yHITkLfgDZPaYYPI3vYXq0lqohR5wTz0QkGpDovXFyYetsm7PmV2togu5nOofP/bDdUnk6ETup0CMssTeKgmzp8zCCNHCHXgzxh6K9se2I/blChl39DCDl4T+8X/EWMiSu0vmwAQ4mZNlyTCMWEwDjBD3TcW56POlA7XaI0k0xw="
     }
 }

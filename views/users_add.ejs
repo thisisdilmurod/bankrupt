@@ -1,10 +1,11 @@
 <% var title='Edit user' %>
-    <% include partials/_header.ejs %>
+    <% include partials/header.ejs %>
 
         <div class="container">
             <div class="card__form">
                 <h3 class="form__title">Add User</h3>
-                <form method="post" action="/users/add">
+                <span class="text-danger" id="err"></span>
+                <form onsubmit="validateForm(event);" method="post" action="/users/add">
                     <div class="form__field">
                         <label for="name" class="form-label">Name:</label>
                         <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp" />
@@ -38,4 +39,4 @@
             </div>
         </div>
 
-        <% include partials/_footer.ejs %>
+        <% include partials/footer.ejs %>
