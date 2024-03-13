@@ -1,17 +1,7 @@
 {
-    "thisisdilmurod": {
-        "name": "thisisdilmurod",
-        "salt": "yDbDzs7bZ5nuxPMMgoSnkAu3LvouKhtHxMQQXBycO5GQVIZXRbZppjiiDXYer4hIXc0BvTSS+5C0WVgXNwmIbg==",
-        "hash": "enmSTk2XQdZaTapqOd/5ceYFZ5I08QXpascI8GoSY+mAhXXOeWvlP0OFzSDYCUB9S2tbsvGeiWS3D6n+mqykXFB4ob2DZdr/uSODlAdgmjXpm7KZJF+knPp5YKwQ1KcCQIxPfgNotlsVuE2Qi+Xjzw48hHt5vBiFSDvE5oE5/Qo="
-    },
     "admin": {
         "name": "admin",
         "salt": "V1DTvfjpqmz8Rs6EoCQoIrTSS502PqNzS1K7reTM95mS5lzXDmAc3LFDzzVgw6F740XV9QoOYbt24DreDZOIDA==",
         "hash": "yHITkLfgDZPaYYPI3vYXq0lqohR5wTz0QkGpDovXFyYetsm7PmV2togu5nOofP/bDdUnk6ETup0CMssTeKgmzp8zCCNHCHXgzxh6K9se2I/blChl39DCDl4T+8X/EWMiSu0vmwAQ4mZNlyTCMWEwDjBD3TcW56POlA7XaI0k0xw="
-    },
-    "user": {
-        "name": "user",
-        "salt": "MqJk0q2oj6Ra/sUG+4FDGhYZbiArd0OtNi2nJ9syEK6n5aSleS21jSRYIzPB0EGVeA0bWLqQ4QrQ3mQrTcjUWg==",
-        "hash": "STrPUaHfMNBIAV8UJmfpNCxAKC7O/O5TGZzg/6iF3rIZAekrpbB+sZFBLX0BfMxyVYTqbQvf05K5oF2wPKE1/p+8CKMM/Crf4I1lBFjvf1+1wFHxB8n8Wn2VW/QKl+0HJx3AT2Z/ETDWUufAsFiY+e1ZrYuwld7xjnbtAnuU7r8="
     }
 }

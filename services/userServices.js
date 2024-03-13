@@ -57,7 +57,7 @@ const updateUser = (data, callback) => {
 
     saveDb(db, callback);
   } else {
-    callback(new Error("User not found"));
+    callback(new Error("User not found!"));
   }
 };
 
@@ -67,4 +67,10 @@ const deleteUser = (id, callback) => {
   saveDb(db, callback);
 };
 
-module.exports = { getUser, getAllUsers, addUser, updateUser, deleteUser };
+module.exports = {
+  getUser,
+  getAllUsers,
+  addUser,
+  updateUser,
+  deleteUser,
+};

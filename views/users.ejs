@@ -1,40 +1,58 @@
-<% var title = "Users" %> <% include partials/header.ejs %>
+<% var title="Users" %>
+    <% include partials/header.ejs %>
 
-<div class="container">
-    <table class="table" style="width: 100%">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Address</th>
-                <th scope="col">Bank</th>
-                <th scope="col">Postcode</th>
-                <th scope="col">Telephone</th>
-                <th scope="col">Passport</th>
-                <th scope="col" class="action-col">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% if (data) { %> <% for(let i = 0; i < data.length; i++) { %>
-            <tr>
-                <td scope="row"><%= data[i].id %></td>
-                <td><%= data[i].name %></td>
-                <td><%= data[i].address %></td>
-                <td><%= data[i].bank_name %></td>
-                <td><%= data[i].postcode %></td>
-                <td><%= data[i].tel %></td>
-                <td><%= data[i].passport %></td>
-                <td class="action-col">
-                    <a href="/users/update/<%= data[i].id %>" class="btn-edit" role="button">Update</a>
-                    <button class="btn-delete" onclick="confirmDelete('/users/delete/<%= data[i].id %>');">Delete</button>
-                </td>
-            </tr>
-            <% } %> <% } %>
-        </tbody>
-    </table>
-    <a href="/users/add" class="add-btn" role="button">Add user</a>
-</div>
+        <div class="container">
+            <table class="table" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Bank</th>
+                        <th scope="col">Postcode</th>
+                        <th scope="col">Telephone</th>
+                        <th scope="col">Passport</th>
+                        <th scope="col" class="action-col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (data) { %>
+                        <% for(let i=0; i < data.length; i++) { %>
+                            <tr>
+                                <td scope="row">
+                                    <%= data[i].id %>
+                                </td>
+                                <td>
+                                    <%= data[i].name %>
+                                </td>
+                                <td>
+                                    <%= data[i].address %>
+                                </td>
+                                <td>
+                                    <%= data[i].bank_name %>
+                                </td>
+                                <td>
+                                    <%= data[i].postcode %>
+                                </td>
+                                <td>
+                                    <%= data[i].tel %>
+                                </td>
+                                <td>
+                                    <%= data[i].passport %>
+                                </td>
+                                <td class="action-col">
+                                    <a href="/users/update/<%= data[i].id %>" class="btn-edit" role="button">Update</a>
+                                    <button class="btn-delete"
+                                        onclick="confirmDelete('/users/delete/<%= data[i].id %>');">Delete</button>
+                                </td>
+                            </tr>
+                            <% } %>
+                                <% } %>
+                </tbody>
+            </table>
+            <a href="/users/add" class="add-btn" role="button">Add user</a>
+        </div>
 
 
 
-<% include partials/footer.ejs %>
+        <% include partials/footer.ejs %>

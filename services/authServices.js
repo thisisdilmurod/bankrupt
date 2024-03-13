@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { getAdmins } = require("../utils");
-const hash = require("pbkdf2-password")(); 
+const hash = require("pbkdf2-password")();
 
 const saveDb = (data, callback) => {
   const config = require("../config.json");
@@ -73,4 +73,9 @@ const createUser = (req, res) => {
   }
 };
 
-module.exports = { saveDb, authenticate, loginUser, createUser}
+module.exports = {
+  saveDb,
+  authenticate,
+  loginUser,
+  createUser,
+};
