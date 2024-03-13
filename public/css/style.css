@@ -97,7 +97,7 @@ textarea {
   border: 1px solid black;
 }
 .submit-btn {
-  background-color: black;
+  background-color: #343434;
   color: white;
   padding: 10px 10px;
   margin: 8px 0;
@@ -109,8 +109,7 @@ textarea {
   border-radius: 5px;
 }
 .submit-btn:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
 }
 .cancel-btn {
   background-color: #f44336;
