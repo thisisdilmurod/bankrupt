@@ -46,21 +46,14 @@ app.use(function (err, req, res, next) {
             res.render('error', {
                 status: err.status,
                 message: err.message,
-                error: err,
-                url: req.url,
             });
         },
         json: function () {
             res.json({
                 status: err.status,
                 message: err.message,
-                error: err,
-                url: req.url,
             });
-        },
-        default: function () {
-            res.type('txt').send(err.message);
-        },
+        }
     });
 });
 

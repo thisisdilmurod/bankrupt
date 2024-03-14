@@ -1,3 +1,4 @@
+// Confirm deletion
 function confirmDelete(url) {
   const result = confirm("Are you sure you want to delete?");
   if (result) {
@@ -5,6 +6,7 @@ function confirmDelete(url) {
   }
 }
 
+// Validate the form
 function validateForm(event) {
   const errMsg = document.getElementById("err");
   const fields = [
@@ -21,6 +23,7 @@ function validateForm(event) {
     if (
       value == "" ||
       value.length > 100 ||
+      value.length < 3 ||
       (field === "tel" && !validPhone(value))
     ) {
       event.preventDefault();
@@ -33,6 +36,7 @@ function validateForm(event) {
   });
 }
 
+// Validate the phone number
 function validPhone(phoneNumber) {
   for (let i = 0; i < phoneNumber.length; i++) {
     if (!/\d/.test(phoneNumber[i])) {

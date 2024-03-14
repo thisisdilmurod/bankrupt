@@ -23,14 +23,14 @@ const saveDb = (data, callback) => {
 
 // Authenticate the user
 const authenticateUser = (name, pass, fn) => {
-  if (!module.parent) console.log("Authenticating %s:%s", name, pass);
+  if (!module.parent) console.log("Authenticating %s:%s!", name, pass);
   var admins = getAdmins();
   var user = admins[name];
-  if (!user) return fn(new Error("Cannot find user"));
+  if (!user) return fn(new Error("Cannot find user!"));
   hash({ password: pass, salt: user.salt }, function (err, pass, salt, hash) {
     if (err) return fn(err);
     if (hash === user.hash) return fn(null, user);
-    fn(new Error("Invalid password"));
+    fn(new Error("Invalid password!"));
   });
 };
 
