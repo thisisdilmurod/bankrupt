@@ -1,3 +1,4 @@
+// Import the required modules
 const {
   getUser,
   getAllUsers,
@@ -6,6 +7,7 @@ const {
   deleteUser,
 } = require("../services/userServices");
 
+// Define the user controller class
 const userController = {
   list: (req, res) => {
     res.render("users", {
@@ -38,6 +40,7 @@ const userController = {
   },
 };
 
+// Handle the response
 const handleResponse = (err, res) => {
   if (err) {
     res.render("error", {

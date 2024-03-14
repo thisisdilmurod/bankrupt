@@ -1,6 +1,8 @@
+// Import the required modules
 const fs = require("fs");
 const { getDb } = require("../utils");
 
+// Write to the database
 const saveDb = (data, callback) => {
   const config = require("../config.json");
   const writeStream = fs.createWriteStream(config.db, {
@@ -18,6 +20,7 @@ const saveDb = (data, callback) => {
   });
 };
 
+// Get all the users
 const getAllUsers = () => {
   const db = getDb();
   const users = Object.keys(db.items).map((key) => {
@@ -29,12 +32,14 @@ const getAllUsers = () => {
   return users;
 };
 
+// Get a user
 const getUser = (id) => {
   const users = getAllUsers();
   const user = users.filter((item) => item.id === id)[0];
   return user;
 };
 
+// Add a user
 const addUser = (user, callback) => {
   const db = getDb();
   let id;
@@ -47,6 +52,7 @@ const addUser = (user, callback) => {
   saveDb(db, callback);
 };
 
+// Update a user
 const updateUser = (data, callback) => {
   const db = getDb();
   const user = db.items[data.id];
@@ -61,6 +67,7 @@ const updateUser = (data, callback) => {
   }
 };
 
+// Delete a user
 const deleteUser = (id, callback) => {
   const db = getDb();
   delete db.items[id];

@@ -1,41 +1,47 @@
-// Put a photo of bankrupt
+![Logo](https://github.com/thisisdilmurod/bankrupt/assets/100064552/69961d36-2c21-4929-be62-8464b60b3aa5)
 
-## Bankrupt
+## About
 
 - A web application to manage bank accounts securely
-- It was developed using Express and EJS
+- It was developed using Express and EJS on Node.js
 
 ## Usage
 
 <details>
 <summary>Website</summary>
-1. Open browser (Chrome, Safari, Edge, etc).
-2. Go to <a href="https://bankrupt.onrender.com/">here</a>.
+<ol>
+<li>Open browser (Chrome, Safari, Edge, etc).</li>
+<li>Go to <a href="https://bankrupt.onrender.com/">here</a>.</li>
+</ol>
 </details>
 
 <details>
 <summary>GitHub</summary>
-1. Clone the <a href="https://github.com/thisisdilmurod/bankrupt">repository</a>.
-2. Install the dependencies: <code>npm install</code>.
-3. Run on the localhost: <code>npm start</code>.
+<ol>
+<li>Clone the <a href="https://github.com/thisisdilmurod/bankrupt">repository</a>.</li>
+<li>Install the dependencies: <code>npm install</code>.</li>
+<li>Run on the localhost: <code>npm start</code>.</li>
+</ol>
 </details>
 
 <details>
 <summary>Docker</summary>
-1. Pull the Docker image: <code>docker pull thisisdilmurod/bankrupt</code>.
-2. Run on the localhost: <code>docker run -p 3000:3000 thisisdilmurod/bankrupt</code> .
+<ol>
+<li>Pull the Docker image: <code>docker pull thisisdilmurod/bankrupt</code>.</li>
+<li>Run on the localhost: <code>docker run -p 3000:3000 thisisdilmurod/bankrupt</code>.</li>
+<ol>
 </details>
 
 ## Features
 
-There are several fundamental features that Bankrupt offers:
-- Authenticate to the application;
-- View previous saved accounts;
-- Create a new account record;
-- Edit the existing account data;
-- Delete previously created account;
+There are several capabilities that app offers:
+- Authenticate to the application
+- View previous saved accounts
+- Create a new account record
+- Edit the existing account data
+- Delete previously created account
 
-* <i>All the dependencies are available under <b>package.json</b></i>.
+<i>All the dependencies are available under <b>package.json</b></i>.
 
 ## Structure
 
@@ -60,8 +66,6 @@ There are several fundamental features that Bankrupt offers:
 |   └───userServices.js
 ├───views
 |    └───partials
-├───.dockerignore
-├───.gitignore
 ├───app.js
 ├───config.json
 ├───dockerfile
@@ -71,5 +75,6 @@ There are several fundamental features that Bankrupt offers:
 └───utils.js
 ```
 
-## Note
-- Bankrupt was created as part of Web Technology coursework and does not represent an actual company.
+## Notes
+- Folder structure might be a bit different from the suggested. It was done to simplify the process.
+- Project was created as part of Web Technology coursework and does not represent any company.

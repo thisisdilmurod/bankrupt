@@ -1,7 +1,9 @@
+// Import the required modules
 const fs = require("fs");
 const { getAdmins } = require("../utils");
 const hash = require("pbkdf2-password")();
 
+// Write to the database
 const saveDb = (data, callback) => {
   const config = require("../config.json");
   const writeStream = fs.createWriteStream(config.admins, {
@@ -19,7 +21,8 @@ const saveDb = (data, callback) => {
   });
 };
 
-const authenticate = (name, pass, fn) => {
+// Authenticate the user
+const authenticateUser = (name, pass, fn) => {
   if (!module.parent) console.log("Authenticating %s:%s", name, pass);
   var admins = getAdmins();
   var user = admins[name];
@@ -31,8 +34,9 @@ const authenticate = (name, pass, fn) => {
   });
 };
 
+// Login the user
 const loginUser = (req, res) => {
-  authenticate(req.body.username, req.body.password, function (err, user) {
+  authenticateUser(req.body.username, req.body.password, function (err, user) {
     if (user) {
       req.session.regenerate(function () {
         req.session.user = user;
@@ -46,6 +50,7 @@ const loginUser = (req, res) => {
   });
 };
 
+// Create the user
 const createUser = (req, res) => {
   var admins = getAdmins();
 
@@ -74,8 +79,6 @@ const createUser = (req, res) => {
 };
 
 module.exports = {
-  saveDb,
-  authenticate,
   loginUser,
   createUser,
 };

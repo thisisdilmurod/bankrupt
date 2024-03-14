@@ -1,6 +1,8 @@
+// Import the required modules
 const session = require('express-session');
 const { loginUser, createUser } = require("../services/authServices");
 
+// Define the auth controller class
 const authController = {
     session: session({resave: false, saveUninitialized: false, secret: 'wiut-webtech-cw2',}),
     middleware: (req, res, next) => {
