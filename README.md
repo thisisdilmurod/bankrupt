@@ -1,4 +1,4 @@
-![Logo](https://github.com/thisisdilmurod/bankrupt/assets/100064552/69961d36-2c21-4929-be62-8464b60b3aa5)
+![Logo](https://github.com/thisisdilmurod/bankrupt/assets/100064552/5203a38e-a15e-44aa-b203-900faffe8b67)
 
 ## About
 
